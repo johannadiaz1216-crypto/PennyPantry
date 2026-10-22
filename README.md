@@ -10,7 +10,7 @@ This repo currently contains the landing page — a static site with no build st
 public/
   index.html   # landing page
   styles.css   # styles (light + dark mode)
-  script.js    # interactive price-comparison demo + waitlist form
+  script.js    # price-comparison demo, waitlist form, theme picker
 netlify.toml   # Netlify config (publishes the public/ folder)
 ```
 
@@ -31,3 +31,5 @@ npx serve public
 The waitlist form uses [Netlify Forms](https://docs.netlify.com/forms/setup/), so sign-ups appear under **Forms** in your Netlify dashboard automatically.
 
 > The prices in the demo comparison are sample data for illustration only.
+
+See [ROADMAP.md](ROADMAP.md) for the phased plan.
