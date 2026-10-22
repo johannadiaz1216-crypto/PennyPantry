@@ -125,6 +125,7 @@ a { color: inherit; }
 .brand-name {
   font: 700 1.25rem "Fraunces", Georgia, serif;
   color: var(--green);
+  white-space: nowrap;
 }
 .nav-links {
   display: flex;
@@ -382,10 +383,18 @@ a { color: inherit; }
 }
 @media (max-width: 720px) {
   .nav-links { display: none; }
+  .brand-name { font-size: 1.1rem; }
+  .nav .btn-small { padding: 0.5rem 0.8rem; font-size: 0.8rem; }
   .steps, .features { grid-template-columns: 1fr; }
   .hero { padding-top: 48px; }
   .section { padding: 56px 0; }
   .search, .waitlist { flex-direction: column; border-radius: var(--radius); }
   .search input, .waitlist input { padding: 0.75rem 1rem; }
   .receipt { transform: none; }
+}
+@media (max-width: 360px) {
+  .nav { gap: 0.5rem; }
+  .nav .brand { gap: 0.4rem; }
+  .nav .brand-mark { width: 28px; height: 28px; font-size: 1rem; }
+  .nav .brand-name { font-size: 1rem; }
 }
