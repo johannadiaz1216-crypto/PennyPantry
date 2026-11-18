@@ -50,7 +50,21 @@
             <li role="none"><button type="button" role="menuitemradio" data-theme-option="pink"><svg class="icon" aria-hidden="true"><use href="#icon-pink"></use></svg>Pink</button></li>
           </ul>
         </div>
-        <a href="#waitlist" class="btn btn-small">Join<span class="hide-sm">&nbsp;the waitlist</span></a>
+        <a href="#waitlist" class="btn btn-small nav-join">Join<span class="hide-sm">&nbsp;the waitlist</span></a>
+        <div class="account" id="account">
+          <a href="login.html" class="nav-login" id="login-link">Log in</a>
+          <div class="account-signed-in" id="account-signed-in" hidden>
+            <button type="button" class="account-toggle" id="account-toggle" aria-haspopup="menu" aria-expanded="false" aria-controls="account-menu">
+              <span class="avatar" id="account-avatar" aria-hidden="true"></span>
+              <span class="account-name" id="account-name"></span>
+            </button>
+            <div class="account-menu" id="account-menu" role="menu" hidden>
+              <p class="account-menu-name" id="account-menu-name"></p>
+              <p class="account-menu-email" id="account-menu-email"></p>
+              <button type="button" role="menuitem" id="sign-out">Log out</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </header>
@@ -188,6 +202,9 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+  <script src="auth.js"></script>
+  <script src="theme.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

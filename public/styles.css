@@ -484,3 +484,119 @@ a { color: inherit; }
 @media (max-width: 480px) {
   .hide-sm { display: none; }
 }
+
+/* Account (header) */
+.account { position: relative; }
+.nav-login {
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: none;
+  padding: 0.4rem 0.2rem;
+  white-space: nowrap;
+}
+.nav-login:hover { text-decoration: underline; }
+.account-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 180px;
+  padding: 3px 0.75rem 3px 3px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text);
+  font: 600 0.9rem "Inter", sans-serif;
+  cursor: pointer;
+}
+.account-toggle:hover { border-color: var(--primary-soft); }
+.account-toggle:focus-visible, .account-menu button:focus-visible { outline: 3px solid var(--primary-soft); outline-offset: 2px; }
+.account-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.avatar {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-weight: 700;
+}
+.avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.avatar-lg { width: 72px; height: 72px; margin: 0 auto 0.75rem; font-size: 1.8rem; }
+.account-menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  min-width: 220px;
+  padding: 0.75rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+.account-menu[hidden] { display: none; }
+.account-menu p { margin: 0; overflow-wrap: anywhere; }
+.account-menu-name { font-weight: 600; }
+.account-menu-email { font-size: 0.85rem; color: var(--muted); margin-bottom: 0.6rem !important; }
+.account-menu button {
+  width: 100%;
+  padding: 0.5rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text);
+  font: 500 0.95rem "Inter", sans-serif;
+  cursor: pointer;
+}
+.account-menu button:hover { background: var(--surface-alt); }
+
+/* Login page */
+.login-main {
+  display: grid;
+  place-items: center;
+  min-height: calc(100vh - 69px);
+  padding: 48px 16px;
+}
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.login-mark { width: 52px; height: 52px; margin: 0 auto 1rem; font-size: 1.7rem; }
+.login-card h1 { font-size: 1.8rem; }
+.login-lede { color: var(--muted); margin: 0 0 1.5rem; }
+.google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #dadce0;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #1f1f1f;
+  font: 500 1rem "Inter", sans-serif;
+  cursor: pointer;
+  transition: background 0.15s ease, box-shadow 0.15s ease;
+}
+.google-btn:hover { background: #f8f9fa; box-shadow: 0 1px 3px rgba(60, 64, 67, 0.2); }
+.google-btn:focus-visible { outline: 3px solid var(--primary-soft); outline-offset: 2px; }
+.google-btn:disabled { opacity: 0.7; cursor: wait; }
+.google-btn svg { width: 20px; height: 20px; }
+.login-status { min-height: 1.5em; margin: 0.75rem 0 0; font-size: 0.9rem; color: var(--muted); }
+.login-fine { margin: 1.5rem 0 0; font-size: 0.8rem; color: var(--muted); }
+
+@media (max-width: 480px) {
+  .account-name { display: none; }
+  .account-toggle { padding: 3px; }
+}
+@media (max-width: 400px) {
+  .nav-join { display: none; }
+}
